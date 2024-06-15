@@ -11,7 +11,7 @@ on:
       - 'hotfix/**' #hotfix/new hotfix/new/button
       # branch developer-1 wouldn't start workflow
     paths-ignore:
-      - '.github/workflow/*'
+      - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
