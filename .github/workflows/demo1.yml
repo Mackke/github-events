@@ -1,5 +1,17 @@
 name: Events Demo 1
-on: ...
+on:
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
+  push:
+    branches:
+      - master # master
+      - 'dev-*' # dev-new, dev-this-is-new
+      - 'hotfix/**' #hotfix/new hotfix/new/button
+      # branch developer-1 wouldn't start workflow
+    paths-ignore:
+      - '.github/workflow/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
